@@ -13,8 +13,8 @@ optional Bubble Card module that finishes the look.
 ## Screenshots
 
 Dark and light, on a real home: Bubble Card buttons and separators with the module,
-and Home Assistant's own cards. The charts are a separate custom card, not part of
-this theme.
+Home Assistant's own cards, and its sidebar and settings. The charts are a separate
+custom card, not part of this theme.
 
 **Office**
 
@@ -31,6 +31,10 @@ this theme.
 **3D printer**
 
 <img width="49%" alt="3D printer, dark" src="assets/printer-dark.webp" /> <img width="49%" alt="3D printer, light" src="assets/printer-light.webp" />
+
+**Settings, with the sidebar open**
+
+<img width="49%" alt="Settings, dark" src="assets/settings-dark.webp" /> <img width="49%" alt="Settings, light" src="assets/settings-light.webp" />
 
 ## Install
 
