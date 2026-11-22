@@ -176,3 +176,9 @@ test("nothing in the published files names the private project it came from", ()
   ])
     assert.doesNotMatch(read(path), /jv-|jarvis/i, path);
 });
+
+test("the README uses full URLs, since Home Assistant's store page can't resolve relative ones", () => {
+  const readme = read("README.md");
+  assert.equal(readme.match(/src="(?!https:\/\/)[^"]*"/g), null, "an image path is relative");
+  assert.equal(readme.match(/\]\((?!https:\/\/|#)[^)]*\)/g), null, "a link is relative");
+});

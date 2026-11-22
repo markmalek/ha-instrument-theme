@@ -1,6 +1,6 @@
 {
   "name": "ha-instrument-theme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Instrument, a Home Assistant theme with dark and light modes, for core cards, Bubble Card and Mushroom.",
   "license": "MIT",

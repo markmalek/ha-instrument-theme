@@ -18,23 +18,23 @@ custom card, not part of this theme.
 
 **Office**
 
-<img width="49%" alt="Office, dark" src="assets/office-dark.webp" /> <img width="49%" alt="Office, light" src="assets/office-light.webp" />
+<img width="49%" alt="Office, dark" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/office-dark.webp" /> <img width="49%" alt="Office, light" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/office-light.webp" />
 
 **Pool**
 
-<img width="49%" alt="Pool, dark" src="assets/pool-dark.webp" /> <img width="49%" alt="Pool, light" src="assets/pool-light.webp" />
+<img width="49%" alt="Pool, dark" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/pool-dark.webp" /> <img width="49%" alt="Pool, light" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/pool-light.webp" />
 
 **Game room**
 
-<img width="49%" alt="Game room, dark" src="assets/game-room-dark.webp" /> <img width="49%" alt="Game room, light" src="assets/game-room-light.webp" />
+<img width="49%" alt="Game room, dark" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/game-room-dark.webp" /> <img width="49%" alt="Game room, light" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/game-room-light.webp" />
 
 **3D printer**
 
-<img width="49%" alt="3D printer, dark" src="assets/printer-dark.webp" /> <img width="49%" alt="3D printer, light" src="assets/printer-light.webp" />
+<img width="49%" alt="3D printer, dark" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/printer-dark.webp" /> <img width="49%" alt="3D printer, light" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/printer-light.webp" />
 
 **Settings, with the sidebar open**
 
-<img width="49%" alt="Settings, dark" src="assets/settings-dark.webp" /> <img width="49%" alt="Settings, light" src="assets/settings-light.webp" />
+<img width="49%" alt="Settings, dark" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/settings-dark.webp" /> <img width="49%" alt="Settings, light" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/settings-light.webp" />
 
 ## Install
 
@@ -57,7 +57,7 @@ custom card, not part of this theme.
 
 ### By hand
 
-Copy [`themes/instrument.yaml`](themes/instrument.yaml) to `/config/themes/instrument/`
+Copy [`themes/instrument.yaml`](https://github.com/markmalek/ha-instrument-theme/blob/main/themes/instrument.yaml) to `/config/themes/instrument/`
 and reload themes as above.
 
 ## Fonts
@@ -86,7 +86,7 @@ photos work well as picture cards instead.
 
 Bubble Card draws some things itself that a theme's variables can't reach: a light
 slider's fill, an "on" button's fill and its sub-buttons. The module in
-[`bubble/instrument.yaml`](bubble/instrument.yaml) draws them the Instrument way:
+[`bubble/instrument.yaml`](https://github.com/markmalek/ha-instrument-theme/blob/main/bubble/instrument.yaml) draws them the Instrument way:
 
 - "on" buttons, sub-buttons and slider fills are a 16% tint of their colour (the
   light's own colour, or the accent), sliders with a bright edge;
@@ -108,9 +108,9 @@ both modes, so a custom card can match it.
 
 ## Contributing
 
-Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for how
+Issues and pull requests are welcome. See [CONTRIBUTING.md](https://github.com/markmalek/ha-instrument-theme/blob/main/CONTRIBUTING.md) for how
 the theme is built and tested.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/markmalek/ha-instrument-theme/blob/main/LICENSE)
