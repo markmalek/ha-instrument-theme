@@ -10,13 +10,38 @@ optional Bubble Card module that finishes the look.
 
 [![Open your Home Assistant instance and open this repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=markmalek&repository=ha-instrument-theme&category=theme)
 
+## Screenshots
+
+Dark and light, on a real home: Bubble Card buttons and separators with the module,
+and Home Assistant's own cards. The charts are a separate custom card, not part of
+this theme.
+
+**Office**
+
+<img width="49%" alt="Office, dark" src="assets/office-dark.webp" /> <img width="49%" alt="Office, light" src="assets/office-light.webp" />
+
+**Pool**
+
+<img width="49%" alt="Pool, dark" src="assets/pool-dark.webp" /> <img width="49%" alt="Pool, light" src="assets/pool-light.webp" />
+
+**Game room**
+
+<img width="49%" alt="Game room, dark" src="assets/game-room-dark.webp" /> <img width="49%" alt="Game room, light" src="assets/game-room-light.webp" />
+
+**3D printer**
+
+<img width="49%" alt="3D printer, dark" src="assets/printer-dark.webp" /> <img width="49%" alt="3D printer, light" src="assets/printer-light.webp" />
+
 ## Install
 
-### With HACS
+### With the Marketplace or HACS
 
-1. Click the button above, or in HACS open the ⋮ menu → **Custom repositories**, add
-   `https://github.com/markmalek/ha-instrument-theme` with the type **Theme**.
-2. Download **Instrument**.
+1. Click the button above, or add the repository by hand:
+   - **Home Assistant 2026.11 and later (Marketplace):** Marketplace → **Add from
+     link**, and paste `https://github.com/markmalek/ha-instrument-theme`.
+   - **HACS:** ⋮ menu → **Custom repositories**, add the same link with the type
+     **Theme**.
+2. Open **Instrument** and install it.
 3. Make sure themes are switched on in `configuration.yaml`:
 
    ```yaml
