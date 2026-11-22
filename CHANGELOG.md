@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Cleaner Settings screenshots, without the Repairs and Updates cards. The theme itself
+  is unchanged.
+
 ## 1.0.1
 
 - New README screenshots: a larger window with the sidebar collapsed on dashboards, and
