@@ -1,0 +1,16 @@
+name: Suggest a change
+description: Support for another card, or a change to how something looks.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What you'd like
+      description: The card or page, and what you'd change about it.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: What it would make easier or clearer. A screenshot of how it looks now helps.
