@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.5
+
+- Contributor setup: issue and pull request templates, a code of conduct, a security
+  policy with private reporting, and Dependabot updates. The theme itself is unchanged.
+
 ## 1.0.4
 
 - The docs, comments and the Bubble Card module's text are in American English ("color"),

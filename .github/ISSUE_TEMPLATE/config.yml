@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and dashboard showcases
+    url: https://github.com/markmalek/ha-instrument-theme/discussions
+    about: Ask how to do something, or share a dashboard that uses Instrument.
+  - name: Report a security problem
+    url: https://github.com/markmalek/ha-instrument-theme/security/advisories/new
+    about: Report it privately instead of in a public issue.

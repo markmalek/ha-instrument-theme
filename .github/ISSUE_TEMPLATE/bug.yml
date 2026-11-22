@@ -1,0 +1,59 @@
+name: Something looks wrong
+description: A card, page or control that's unreadable, the wrong color or out of place.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: A screenshot and the card's name are the most useful things you can send.
+  - type: textarea
+    id: what
+    attributes:
+      label: What looks wrong
+      description: What you see, and what you expected to see.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in here. Hide anything private first.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: [Dark, Light, Both]
+    validations:
+      required: true
+  - type: input
+    id: card
+    attributes:
+      label: Card
+      description: "For example: tile, entities, Bubble Card button, Mushroom light, or a page such as Settings."
+    validations:
+      required: true
+  - type: input
+    id: instrument
+    attributes:
+      label: Instrument version
+      placeholder: "1.0.5"
+    validations:
+      required: true
+  - type: input
+    id: ha
+    attributes:
+      label: Home Assistant version
+      placeholder: "2026.11.2"
+    validations:
+      required: true
+  - type: input
+    id: cards
+    attributes:
+      label: Card versions
+      description: Bubble Card or Mushroom version, if the problem is in one of them.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Is the Instrument Bubble Card module installed?
+      options: ["Yes", "No", "I don't use Bubble Card"]

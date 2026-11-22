@@ -1,7 +1,11 @@
 # Contributing to Instrument
 
 Thanks for helping. Bug reports with a screenshot and the card involved are the most
-useful thing you can send.
+useful thing you can send. Questions and dashboard showcases go in
+[Discussions](https://github.com/markmalek/ha-instrument-theme/discussions), and security
+problems go in a [private report](https://github.com/markmalek/ha-instrument-theme/security/advisories/new)
+(see [SECURITY.md](SECURITY.md)). Everyone taking part follows the
+[code of conduct](CODE_OF_CONDUCT.md).
 
 ## How the theme is made
 
@@ -40,6 +44,10 @@ To try a change in Home Assistant, copy `themes/instrument.yaml` (and
 `bubble/instrument.yaml` if you changed it) into your config and reload themes.
 
 ## Pull requests
+
+Changes reach `main` only through a pull request, and CI and the HACS check have to
+pass before it can merge. Pull requests are squash-merged, so the title becomes the
+commit message: write it as a short command, such as "Tint Mushroom chips in light mode".
 
 - Keep one change per pull request, and say which cards it affects.
 - Include before and after screenshots, in dark and light mode, for anything visual.
