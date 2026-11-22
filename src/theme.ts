@@ -1,5 +1,5 @@
 // Instrument, a Home Assistant theme, as the YAML Home Assistant reads from its
-// themes/ folder. Every colour, font, corner and shadow comes from src/palette.json.
+// themes/ folder. Every color, font, corner and shadow comes from src/palette.json.
 //
 // The theme sets three kinds of variable:
 //   - Home Assistant's own (backgrounds, cards, text, sidebar, header, states, fonts,
@@ -23,7 +23,7 @@ const HEX = /^#[0-9a-f]{6}$/i;
 
 /** "#4c8dff" → [76, 141, 255]. */
 export function rgbOf(hex: string): [number, number, number] {
-  if (!HEX.test(hex)) throw new Error(`not a six-digit hex colour: ${hex}`);
+  if (!HEX.test(hex)) throw new Error(`not a six-digit hex color: ${hex}`);
   const n = Number.parseInt(hex.slice(1), 16);
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 }
@@ -73,7 +73,7 @@ export function primaryScale(accent: string): Record<string, string> {
   };
 }
 
-/** WCAG contrast ratio of two hex colours. */
+/** WCAG contrast ratio of two hex colors. */
 export function contrast(a: string, b: string): number {
   const lum = (hex: string) => {
     const [r, g, bl] = rgbOf(hex).map((c) => {
@@ -86,7 +86,7 @@ export function contrast(a: string, b: string): number {
   return (hi + 0.05) / (lo + 0.05);
 }
 
-/** The palette's colours in one mode, by name. Every colour must be a six-digit hex. */
+/** The palette's colors in one mode, by name. Every color must be a six-digit hex. */
 export function colors(palette: Palette, mode: Mode): Record<string, string> {
   const out: Record<string, string> = {};
   for (const [name, value] of Object.entries(palette.colors)) {
@@ -136,7 +136,7 @@ export function sharedVariables(palette: Palette): [string, string][] {
   ];
 }
 
-/** Variables that change with the mode: every colour. */
+/** Variables that change with the mode: every color. */
 export function modeVariables(palette: Palette, mode: Mode): [string, string][] {
   const c = colors(palette, mode);
   const shadow = palette.shadow[mode];
@@ -237,13 +237,13 @@ export function modeVariables(palette: Palette, mode: Mode): [string, string][] 
     ["rgb-error-color", triple(c.danger)],
     ["rgb-info-color", triple(primary)],
     ["history-unavailable-color", c.off],
-    // Bubble Card colours.
+    // Bubble Card colors.
     ["bubble-main-background-color", c.card],
     ["bubble-secondary-background-color", c.inset],
     ["bubble-accent-color", primary],
     // An "on" button without the Instrument module: Bubble paints it solid, so give it
     // a quiet accent tint over the card that keeps the text readable. The module
-    // (bubble/instrument.yaml) tints each fill from its own colour instead.
+    // (bubble/instrument.yaml) tints each fill from its own color instead.
     ["bubble-button-accent-color", mix(c.card, c.ac, 0.16)],
     ["bubble-icon-background-color", c.inset],
     ["bubble-sub-button-background-color", c.inset],
@@ -260,7 +260,7 @@ export function modeVariables(palette: Palette, mode: Mode): [string, string][] 
     ["bubble-pop-up-background-color", c.canvas],
     ["bubble-pop-up-main-background-color", c.card],
     ["bubble-backdrop-background-color", backdrop],
-    // Mushroom colours.
+    // Mushroom colors.
     ["mush-card-primary-color", c.text],
     ["mush-card-secondary-color", c.soft],
     ["mush-title-color", c.strong],

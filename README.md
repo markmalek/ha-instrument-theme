@@ -88,16 +88,16 @@ Bubble Card draws some things itself that a theme's variables can't reach: a lig
 slider's fill, an "on" button's fill and its sub-buttons. The module in
 [`bubble/instrument.yaml`](https://github.com/markmalek/ha-instrument-theme/blob/main/bubble/instrument.yaml) draws them the Instrument way:
 
-- "on" buttons, sub-buttons and slider fills are a 16% tint of their colour (the
-  light's own colour, or the accent), sliders with a bright edge;
-- an "on" icon sits on a tile tinted with its own colour;
+- "on" buttons, sub-buttons and slider fills are a 16% tint of their color (the
+  light's own color, or the accent), sliders with a bright edge;
+- an "on" icon sits on a tile tinted with its own color;
 - the state line is mono, bright when on;
 - separators are a small uppercase mono label on a 1px line.
 
 To install it with [Bubble Card Tools](https://github.com/Clooos/Bubble-Card-Tools),
 copy the file to `/config/bubble_card/modules/instrument.yaml`. It is global
 (`is_global: true`), so every Bubble card gets it; set that to `false` and add
-`instrument` to a card's `modules:` to use it on some cards only. Every colour in it
+`instrument` to a card's `modules:` to use it on some cards only. Every color in it
 falls back to a Home Assistant one, so cards under another theme stay readable.
 
 ## For card authors

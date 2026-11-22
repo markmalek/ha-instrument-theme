@@ -39,7 +39,7 @@ test("both modes set exactly the same variables, each once", () => {
   for (const [k] of dark) assert.ok(!shared.has(k), `${k} is both shared and per mode`);
 });
 
-test("every palette colour is exported as --instrument-*, in both modes", () => {
+test("every palette color is exported as --instrument-*, in both modes", () => {
   for (const mode of MODES) {
     const vars = asMap(modeVariables(palette, mode));
     for (const [name, value] of Object.entries(palette.colors))
@@ -73,8 +73,8 @@ test("text stays readable in both modes", () => {
   }
 });
 
-test("text stays readable on the module's tinted fills, whatever the light's colour", () => {
-  // The module draws an "on" fill as color-mix(<colour> 16%, transparent) over the card.
+test("text stays readable on the module's tinted fills, whatever the light's color", () => {
+  // The module draws an "on" fill as color-mix(<color> 16%, transparent) over the card.
   const lights = [
     "#4c8dff",
     "#0000ff",
@@ -126,7 +126,7 @@ test("the primary scale darkens below 40 and lightens above it", () => {
   for (let i = 1; i < keys.length; i++) assert.ok(lum(s[keys[i]]) > lum(s[keys[i - 1]]), keys[i]);
 });
 
-test("colour helpers", () => {
+test("color helpers", () => {
   assert.equal(mix("#000000", "#ffffff", 0.5), "#808080");
   assert.equal(triple("#10151f"), "16, 21, 31");
   assert.equal(yamlValue("#10151f"), '"#10151f"');
@@ -143,12 +143,12 @@ test("the file is one Instrument theme with a dark and a light mode", () => {
   assert.match(yaml, /\nInstrument:\n {2}ha-font-family-body: /);
   assert.match(yaml, /\n {2}modes:\n {4}dark:\n {6}primary-color: "#/);
   assert.match(yaml, /\n {4}light:\n {6}primary-color: "#/);
-  // Every value line is quoted, so YAML never reads a colour as a comment or a number.
+  // Every value line is quoted, so YAML never reads a color as a comment or a number.
   for (const line of yaml.split("\n").filter((l) => /^ {2,6}[a-z]/.test(l) && !/:\s*$/.test(l)))
     assert.match(line, /: ["']/, line);
 });
 
-test("the Bubble module is one global module whose colours all fall back", () => {
+test("the Bubble module is one global module whose colors all fall back", () => {
   const yaml = read("bubble/instrument.yaml");
   assert.match(yaml, /^instrument:\n {2}name: "Instrument"\n/);
   assert.match(yaml, /\n {2}code: \|\n/);
@@ -157,11 +157,11 @@ test("the Bubble module is one global module whose colours all fall back", () =>
   // since the module draws every fill as a quiet tint.
   assert.match(yaml, /--bubble-sub-button-dark-text-color: var\(--primary-text-color\);/);
   assert.match(yaml, /--bubble-sub-button-light-text-color: var\(--primary-text-color\);/);
-  // Under another theme a bare var(--instrument-*) is empty and the colour drops out.
+  // Under another theme a bare var(--instrument-*) is empty and the color drops out.
   assert.equal(yaml.match(/var\(--instrument-[a-z0-9-]+\)/g), null);
   assert.equal(yaml.match(/var\(--bubble-slider-fill-color\)/g), null);
   assert.equal(yaml.split("{").length, yaml.split("}").length, "braces balance");
-  // Every colour it reads is one the theme sets.
+  // Every color it reads is one the theme sets.
   const exported = new Set(modeVariables(palette, "dark").map(([k]) => k));
   for (const [, name] of yaml.matchAll(/var\(--(instrument-[a-z0-9-]+)/g))
     assert.ok(exported.has(name), `${name} is not set by the theme`);
@@ -175,6 +175,21 @@ test("nothing in the published files names the private project it came from", ()
     "src/theme.ts",
   ])
     assert.doesNotMatch(read(path), /jv-|jarvis/i, path);
+});
+
+test("the project is written in American English", () => {
+  const files = [
+    "README.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "src/theme.ts",
+    "scripts/build.ts",
+    "bubble/instrument.yaml",
+    "themes/instrument.yaml",
+  ];
+  const british =
+    /\b(colours?|behaviours?|favou?rites?|centre[sd]?|licence|organis\w*|recognis\w*|customis\w*|optimis\w*|analys(e|ed|ing)|greys?)\b/i;
+  for (const path of files) assert.doesNotMatch(read(path), british, path);
 });
 
 test("the README uses full URLs, since Home Assistant's store page can't resolve relative ones", () => {

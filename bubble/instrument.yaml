@@ -17,9 +17,9 @@ instrument:
   description: |
     Draws Bubble Card the Instrument way, on top of the Instrument theme:
     tinted "on" buttons and slider fills with a bright edge, a tinted icon
-    tile, mono state text, and quiet mono separators. Every Instrument colour
+    tile, mono state text, and quiet mono separators. Every Instrument color
     falls back to a Home Assistant one, so a card under another theme keeps
-    readable colours.
+    readable colors.
   code: |
     /* Inter and JetBrains Mono inside the card, even on a single themed view. */
     .bubble-container {
@@ -27,14 +27,14 @@ instrument:
     }
 
     /* "On": Bubble fills the button with the accent, or a light with its own
-       colour; draw that as a 16% tint instead of solid. The accent is set
+       color; draw that as a 16% tint instead of solid. The accent is set
        on ha-card so it beats modules that point it back at primary-color. */
     ha-card {
       --bubble-button-accent-color: var(--instrument-ac, var(--primary-color));
     }
     /* Bubble picks a sub-button's text from the raw fill (dark text on a bright
        one, white on a dark one), but every fill here is drawn as a quiet tint,
-       so both tones take the theme's text colour. On :host, so pop-ups (which
+       so both tones take the theme's text color. On :host, so pop-ups (which
        have no ha-card) get it too; a pop-up's own "on" header keeps the
        theme's bubble-button-accent-color tint. */
     :host {
@@ -52,7 +52,7 @@ instrument:
       border-color: color-mix(in srgb, var(--instrument-ac, var(--primary-color)) 26%, var(--instrument-line, var(--divider-color))) !important;
     }
 
-    /* Slider fill: the light's colour (or the accent) at 16%, with a bright edge. */
+    /* Slider fill: the light's color (or the accent) at 16%, with a bright edge. */
     .bubble-range-slider .bubble-range-fill {
       --bubble-accent-color: var(--instrument-ac, var(--primary-color));
       background-color: color-mix(in srgb, var(--bubble-slider-fill-color, var(--instrument-ac, var(--primary-color))) 16%, transparent) !important;
@@ -62,7 +62,7 @@ instrument:
       box-shadow: inset -2px 0 0 color-mix(in srgb, var(--bubble-slider-fill-color, var(--instrument-ac, var(--primary-color))) 75%, white);
     }
 
-    /* Icon tile: tinted with the icon's own colour when on. */
+    /* Icon tile: tinted with the icon's own color when on. */
     ha-card.is-on .bubble-icon-container {
       background-color: color-mix(in srgb, currentColor 18%, var(--instrument-card, var(--card-background-color))) !important;
       box-shadow: 0 0 14px color-mix(in srgb, currentColor 30%, transparent);

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4
+
+- The docs, comments and the Bubble Card module's text are in American English ("color"),
+  and a test keeps them that way. The theme itself is unchanged.
+
 ## 1.0.3
 
 - The README's screenshots and links use full URLs, so they also show on the store page

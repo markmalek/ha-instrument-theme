@@ -9,7 +9,7 @@ useful thing you can send.
 
 | File | What it holds |
 | --- | --- |
-| `src/palette.json` | The colours (dark and light), fonts, corners and shadow. |
+| `src/palette.json` | The colors (dark and light), fonts, corners and shadow. |
 | `src/theme.ts` | Which Home Assistant, Bubble Card and Mushroom variables get which palette values. |
 | `scripts/build.ts` | Writes `themes/instrument.yaml` from the two above. |
 | `bubble/instrument.yaml` | The Bubble Card module, written by hand. |
@@ -19,7 +19,7 @@ Most changes belong in `src/theme.ts` (a variable that's missing or wrong for so
 card) or `bubble/instrument.yaml`.
 
 `src/palette.json` is synced from the design system the palette comes from, which
-opens a pull request here when the colours change. To propose a colour change, open an
+opens a pull request here when the colors change. To propose a color change, open an
 issue or a pull request that explains it; it gets applied at the source too, so the
 next sync keeps it.
 
