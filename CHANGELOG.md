@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.6
+
+- A new pair of README screenshots: a dashboard of only Home Assistant's built-in cards
+  (weather, thermostat, tiles with their controls, media, gauges and graphs). The theme
+  itself is unchanged.
+
 ## 1.0.5
 
 - Contributor setup: issue and pull request templates, a code of conduct, a security
