@@ -12,9 +12,14 @@ optional Bubble Card module that finishes the look.
 
 ## Screenshots
 
-Dark and light, on a real home: Bubble Card buttons and separators with the module,
-Home Assistant's own cards, and its sidebar and settings. The charts are a separate
+Dark and light, on a real home. The first pair uses only Home Assistant's built-in
+cards, so it's what Instrument looks like on any install. The rest add Bubble Card
+buttons and separators with the module. The charts on those dashboards are a separate
 custom card, not part of this theme.
+
+**Built-in cards only**
+
+<img width="49%" alt="Built-in cards, dark" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/stock-dark.webp" /> <img width="49%" alt="Built-in cards, light" src="https://raw.githubusercontent.com/markmalek/ha-instrument-theme/main/assets/stock-light.webp" />
 
 **Office**
 
